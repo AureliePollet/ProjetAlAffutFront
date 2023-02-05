@@ -2,7 +2,8 @@
 import '../styles/style.css';
 import '../styles/bootstrap.css';
 import axios from 'axios';
-import { useState } from 'react';
+import {useEffect, useState} from 'react';
+import {useNavigate} from "react-router-dom";
 
 
 
@@ -15,10 +16,16 @@ function Inscription() {
     const [mail, setMail] = useState("");
     const [password, setPassword] = useState("");
 
+    const navigate = useNavigate();
+
+    useEffect(() => {
+        if (localStorage.getItem("isAuthenticated") === "true") {
+            navigate("/");
+        }
+    }, []);
 
     function register() {
 
-        console.log(civilite);
         axios.post('http://localhost:8080/etudiant/add', {
             civilite: civilite,
             nom: lastName,
@@ -27,8 +34,12 @@ function Inscription() {
             etablissementScolaire: school,
             email: mail,
             password: password
-        }).then(response => console.log(response));
-
+        }).then(response => {
+                localStorage.setItem("isAuthenticated", "true");
+                localStorage.setItem("userDetails", JSON.stringify(response.data));
+                navigate("/");
+            }
+        );
     }
 
 
@@ -42,9 +53,9 @@ function Inscription() {
                 <label htmlFor="civilite" className="form-label">Civilité</label>
                     <select className="form-select form-select-sm" aria-label=".form-select-sm example" value={civilite} onChange={(e) => setCivilite(e.target.value)} required>
                         <option selected>Civilité</option>
-                        <option value="1">MADEMOISELLE</option>
-                        <option value="2">MADAME</option>
-                        <option value="3">MONSIEUR</option>
+                        <option value="MADEMOISELLE">MADEMOISELLE</option>
+                        <option value="MADAME">MADAME</option>
+                        <option value="MONSIEUR">MONSIEUR</option>
                     </select>
                     </div>
                     <div className="mb-3">
@@ -78,7 +89,7 @@ function Inscription() {
                             required value={password} onChange={(e) => setPassword(e.target.value)} />
                     </div>
                     <div className="inscription-evenement">
-                        <button className="btn btn-color btn-form" type="submit" onClick={register}>S'inscrire</button>
+                        <button className="btn btn-color btn-form" type="button" onClick={register}>S'inscrire</button>
                     </div>
                 </form>
             </section>
