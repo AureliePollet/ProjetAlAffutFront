@@ -1,22 +1,8 @@
 import '../styles/style.css';
 import '../styles/bootstrap.css';
-import { useEffect, useState } from 'react';
+import {useEffect, useState} from 'react';
 import axios from 'axios';
-import Modal from 'react-modal';
 import EvenementModal from '../components/EvenementModal';
-
-const customStyles = {
-    content: {
-      with:'200px',
-      top: '50%',
-      left: '50%',
-      right: 'auto',
-      bottom: 'auto',
-      marginRight: '-50%',
-      transform: 'translate(-50%, -50%)',
-    },
-  };
-
 
 function Agenda() {
 
@@ -33,14 +19,14 @@ function Agenda() {
 
     function openModal(event: any) {
         setIsOpen(true);
-        setModalData([event.nom,event.date,event.nbPlaces,event.descriptif,event.id])
-        
+        setModalData([event.nom, event.date, event.nbPlaces, event.descriptif, event.id])
+
     }
 
     function afterOpenModal() {
         // references are now sync'd and can be accessed.
         subtitle.style.color = '#f00';
-      }
+    }
 
     function closeModal() {
         setIsOpen(false);
@@ -56,7 +42,8 @@ function Agenda() {
                             <div className="date-card">
                                 <div className="day">{new Date(event.date).getDay()}</div>
                                 <div>
-                                    <div className="month">{new Date(event.date).toLocaleString('default', { month: 'long' }).toUpperCase()}</div>
+                                    <div
+                                        className="month">{new Date(event.date).toLocaleString('default', {month: 'long'}).toUpperCase()}</div>
                                     <div className="year">{new Date(event.date).getFullYear()}</div>
                                 </div>
                             </div>
@@ -69,16 +56,18 @@ function Agenda() {
                         </div>
                         <div className="card-footer">
                             <div className="inscription-evenement">
-                            <EvenementModal
-                            dynData={modalData}
-                            IsModalOpened={modalIsOpen}
-                            onCloseModal={closeModal}
-                            onAfterOpen={afterOpenModal}>
+                                <EvenementModal
+                                    dynData={modalData}
+                                    IsModalOpened={modalIsOpen}
+                                    onCloseModal={closeModal}
+                                    onAfterOpen={afterOpenModal}>
 
-                            </EvenementModal>
-                                <button className="btn btn-color btn-evenement" type="submit" onClick={() => openModal(event)}>S'inscrire à
-                                    l'événement</button>
-                        
+                                </EvenementModal>
+                                <button className="btn btn-color btn-evenement" type="submit"
+                                        onClick={() => openModal(event)}>S'inscrire à
+                                    l'événement
+                                </button>
+
                             </div>
                         </div>
                     </div>
@@ -98,7 +87,8 @@ function Agenda() {
                 <section className="container">
 
                     <div>
-                        <h3 className="texte-descriptif"> Lorem ipsum dolor sit amet consectetur adipisicing elit. Sint officia
+                        <h3 className="texte-descriptif"> Lorem ipsum dolor sit amet consectetur adipisicing elit. Sint
+                            officia
                             natus sit ratione officiis unde ab
                             assumenda dolorem eius voluptas. Quo illo nemo ipsum sint eveniet quod? Similique, vel
                             consequuntur.</h3>
@@ -111,7 +101,7 @@ function Agenda() {
                     </div>
 
                     {
-                        (eventsResponse.length > 0) ? <Events /> : <p>Y'A RIEN ICI</p>
+                        (eventsResponse.length > 0) ? <Events/> : <p>Y'A RIEN ICI</p>
                     }
 
                 </section>
@@ -120,4 +110,5 @@ function Agenda() {
 
     )
 }
+
 export default Agenda;

@@ -2,7 +2,6 @@ import React from 'react';
 import { BrowserRouter, Route, Routes } from 'react-router-dom';
 import Footer from './components/footer';
 import Navigation from './components/Navigation';
-import logo from './images/logos/logoBallon.png';
 import Accueil from './pages/Accueil';
 import AdminLogin from './admin/AdminLogin';
 import Agenda from './pages/Agenda';

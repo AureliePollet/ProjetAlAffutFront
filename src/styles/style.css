@@ -290,6 +290,14 @@ img.logo-contact{
     border-radius: 10px;
 }
 
+.hidden{
+    visibility: hidden;
+}
+
+.messageRetour{
+    text-align: center;
+}
+
 .btn-form{
     margin-top: 60px;
     background-color: #146E65;
