@@ -4,14 +4,24 @@
 .connexion{
     display: flex;
 justify-content: flex-end;
+align-items: center;
 }
 
 .bg-nouveau{
-    background-color: #104E82;
+    background-color: #104E82 !important;
 }
 
+a.dropdown-toggle{
+  color: #ffffff;
+}
+a.dropdown-toggle:hover{
+  color: #fdcc1e;
+}
+.navbar-nav .show > .nav-link,.nav-link.active {
+color: #ffffff !important;
+}
 .navig{
-    color: white;
+    color: white ;
 }
 
 .navig:hover{

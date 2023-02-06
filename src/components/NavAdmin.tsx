@@ -1,5 +1,5 @@
 import { NavLink } from "react-router-dom";
-import { Dropdown } from 'react-bootstrap';
+import { Dropdown, NavDropdown } from 'react-bootstrap';
 import '../styles/style.css';
 import '../styles/bootstrap.css';
 import React from 'react';
@@ -34,11 +34,11 @@ function NavAdmin() {
                   <Dropdown.Item href="./listecommerce">
                     Liste des commerces
                   </Dropdown.Item>
-                  <hr className="dropdown-divider" />
+                  <NavDropdown.Divider />
                   <Dropdown.Item href="./ajoutercommerce">
                     Ajouter un commerce
                   </Dropdown.Item>
-                  <hr className="dropdown-divider" />
+                  <NavDropdown.Divider />
                   <Dropdown.Item href="./modifiercommerce">
                     Modifier un commerce
                   </Dropdown.Item>
@@ -54,11 +54,11 @@ function NavAdmin() {
                   <Dropdown.Item href="./listeevenements">
                     Liste des évènements
                   </Dropdown.Item>
-                  <hr className="dropdown-divider" />
+                  <NavDropdown.Divider />
                   <Dropdown.Item href="./ajouterevenement">
                     Ajouter un évènements
                   </Dropdown.Item>
-                  <hr className="dropdown-divider" />
+                  <NavDropdown.Divider />
                   <Dropdown.Item href="./modifierevenement">
                     Modifier un évènements
                   </Dropdown.Item>
