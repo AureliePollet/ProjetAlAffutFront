@@ -1,8 +1,44 @@
 import '../styles/style.css';
 import '../styles/bootstrap.css';
+import { useEffect, useState } from 'react';
+import axios from 'axios';
 
 
 function ListeRest() {
+
+
+    const [restoResponse, setRestoResponse] = useState<any[]>([]);
+
+    async function getResto() {
+        const response = await axios.get('http://localhost:8080/commerce/all');
+        console.log(response);
+        setRestoResponse(response.data);
+    }
+
+
+    const Restaurant = () => (
+        <section className="row mt-2">
+            {restoResponse.filter(re => re.categorie == 'RESTAURANT').map((resto:any) => (
+                <div className=" col-md-6 col-lg-4 ">
+                    <div className="card" >
+                        <img src={resto.urlImage} className="card-img-top" alt="..."/>
+                        <div className="card-body">
+                        <h5 className="card-title">{resto.nom}</h5>
+                            <p className="card-text">{resto.descriptif}</p>
+                        </div>
+                    </div>
+                </div>
+            ))}</section>
+    );
+
+    useEffect(() => {
+        getResto();
+    }, []);
+
+
+
+
+
     return (
 
         <main id="ListeRest">
@@ -22,6 +58,8 @@ function ListeRest() {
                 </div>
                 <div className="album py-5 bg-light">
                     <div className="container">
+
+                        <Restaurant/>
 
                         <div className="row row-cols-1 row-cols-sm-2 row-cols-md-4 g-3">
                             <div className="col">

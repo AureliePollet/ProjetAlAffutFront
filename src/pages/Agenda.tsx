@@ -55,7 +55,7 @@ function Agenda() {
 
                             <p className="card-text adresse"><u>{event.adresse}</u></p>
                         </div>
-                        <div className="card-footer">
+                       
                             <div className="inscription-evenement">
                                 <EvenementModal
                                     dynData={modalData}
@@ -64,12 +64,14 @@ function Agenda() {
                                     onAfterOpen={afterOpenModal}>
 
                                 </EvenementModal>
-                                <button className="btn btn-color btn-evenement" type="submit"
+                                <div className="d-flex justify-content-between align-items-center">
+                                            <div className="btn-group">
+                                <button className="btn btn-sm btn-outline-secondary btn-vert" type="submit"
                                         onClick={() => openModal(event)}>S'inscrire à
                                     l'événement
                                 </button>
-
-                            </div>
+                                </div>
+                                </div>
                         </div>
                     </div>
                 </div>
@@ -88,18 +90,16 @@ function Agenda() {
                 <section className="container">
 
                     <div>
-                        <h3 className="texte-descriptif"> Lorem ipsum dolor sit amet consectetur adipisicing elit. Sint
-                            officia
-                            natus sit ratione officiis unde ab
-                            assumenda dolorem eius voluptas. Quo illo nemo ipsum sint eveniet quod? Similique, vel
-                            consequuntur.</h3>
+                        <h3 className="texte-descriptif"> Te voilà dans les évènements made by <i>A l'Affut</i>. 
+                        Sur cette page, tu trouveras des ateliers pour booster ton CV, préparer tes entretiens pour prendre confiance en toi.
+                        Et aussi, tu pourras trouver des ateliers pour apprendre à gérer ton budget. </h3>
                     </div>
 
 
-                    <div className="trier-filtrer">
+                    {/* <div className="trier-filtrer">
                         <button className="btn btn-color" type="submit">Filtrer</button>
                         <button className="btn btn-color" type="submit">Trier par</button>
-                    </div>
+                    </div> */}
 
                     {
                         (eventsResponse.length > 0) ? <Events/> : <p>Y'A RIEN ICI</p>

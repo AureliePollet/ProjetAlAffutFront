@@ -26,7 +26,7 @@ function Navigation() {
             return <Dropdown.Menu>
                 <Dropdown.Item href="./connexion">Se connecter</Dropdown.Item>
             <hr className="dropdown-divider" />
-            <Dropdown.Item href="./inscription">S"inscrire</Dropdown.Item>
+            <Dropdown.Item href="./inscription">S'inscrire</Dropdown.Item>
             </Dropdown.Menu>
         }
     }

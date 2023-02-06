@@ -38,17 +38,16 @@ const customStyles = {
     function register() {
        console.log(userDetails)
         axios.post('http://localhost:8080/event/addetudiant/'+userDetails.id,{eventId: props.dynData[4]})
-        .then(response => setInscriptionOk("Inscription OK"));
-
+        .then(response => setInscriptionOk("Votre inscription a bien été prise en compte, un mail de confirmation va vous être envoyé"));
     }
-
+ 
     let logged = localStorage.getItem("isAuthenticated");
 
     const renderButtons = () => {
         if (logged) {
-            return <button disabled={inscriptionOk.length>0} onClick={register}>S'inscrire</button>
+            return <button className='btn-group btn-color outline-secondary'  disabled={inscriptionOk.length>0} onClick={register} >S'inscrire</button>
         } else {
-            return <a href="/connexion"><button>Se connecter</button></a>
+            return <a className='btn-connexion-modal' href="/connexion" ><button className='btn-group btn-color outline-secondary ' >Se connecter</button></a>
         }
     }
   
@@ -60,14 +59,14 @@ const customStyles = {
           style={customStyles}
           ariaHideApp={false}
         >
-          <h2>{props.dynData[0]}</h2>
-          <p>Date: {props.dynData[1]}</p>
-          <p>Descriptif: {props.dynData[3]}</p>
+          <h2><b>{props.dynData[0]}</b></h2>
+          <h5>Date: {props.dynData[1]}</h5> <br />
+          <p><b>Descriptif:</b> {props.dynData[3]}</p>
           <p>Nombre de places disponibles: {props.dynData[2]}</p>
           {
             renderButtons()
         }
-          <button onClick={e => onModalClose(e)}>Fermer</button>
+          <button className='btn-group m-3 btn-color outline-secondary' onClick={e => onModalClose(e)}>Fermer</button>
           {inscriptionOk}
         </Modal>
       </div>

@@ -13,8 +13,8 @@ return(
                     <h5>Menu</h5>
                     <ul className="nav flex-column">
                         <NavLink to="./" className="nav-link p-0 nav-item mb-2 navig">Accueil</NavLink>
-                        <NavLink to="./restaurants" className="nav-link p-0 nav-item mb-2 navig">Restaurants</NavLink>
-                        <NavLink to="./lifestyle" className="nav-link p-0 nav-item mb-2 navig">Life Style</NavLink>
+                        <NavLink to="/restaurants" className="nav-link p-0 nav-item mb-2 navig">Restaurants</NavLink>
+                        <NavLink to="/lifestyle" className="nav-link p-0 nav-item mb-2 navig">Life Style</NavLink>
                         <NavLink to="./culture-aides" className="nav-link p-0 nav-item mb-2 navig">Culture / Aides</NavLink>
                         <NavLink to="./evenements" className="nav-link p-0 nav-item mb-2 navig">Événements</NavLink>
             

@@ -20,11 +20,11 @@ function APropos(){
 
             <div>
                 <p className="paragraphe">
-                    Lorem ipsum dolor, sit amet consectetur adipisicing elit. Voluptas ad eius repellat explicabo dolore
-                    architecto eveniet officiis voluptates non, quas distinctio accusantium voluptate saepe delectus
-                    laboriosam autem corrupti consequatur beatae quos assumenda nisi repudiandae! Animi eos pariatur
-                    ratione error magni sapiente, delectus suscipit dicta repellendus odit perferendis, dignissimos
-                    architecto sit?
+                "A l'Affut" est un accès gratuit et simple à toutes les meilleures réductions et bons plans pour les étudiants, et vous donne la possibilité de participer à des évènements made by <br /> "A l'affut".
+                Il va permettre d'augmenter le pouvoir d’achat des étudiants. <br />
+                Pour participer à un de nos évènements, il vous suffira de créer un compte.
+            
+
                 </p>
             </div>
             <div>

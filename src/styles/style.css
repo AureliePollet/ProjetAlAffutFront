@@ -32,6 +32,10 @@ justify-content: flex-end;
 .nav-end{
     display: flex;
     align-items: center;
+    font-family: 'Roboto', sans-serif;
+    color: white;
+      
+    
 }
 
 .search{
@@ -198,7 +202,10 @@ h3,
 
 /* PARTIE EVENEMENTS*/
 
-
+.scroll {
+  max-height: 135px;
+  overflow-y: auto;
+}
 
 .date-card{
    
@@ -239,7 +246,19 @@ h3,
     font-family: 'Roboto', sans-serif;
   }
 
+  .scroll {
+    max-height: 100px;
+    overflow-y: auto;
+    scrollbar-width: none;
+}
 
+.event-descriptif{
+  height: 200px;
+}
+
+.btn-connexion-modal{
+  text-decoration: none;
+}
 
 /* PARTIE A PROPOS*/
 
