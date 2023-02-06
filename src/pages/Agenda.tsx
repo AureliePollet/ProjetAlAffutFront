@@ -34,7 +34,8 @@ function Agenda() {
 
     const Events = () => (
         <section className="row mt-2">
-            {eventsResponse.map((event: any) => (
+            
+            {eventsResponse.filter(ev => ev.urlImage == null).map((event:any) =>(
                 <div className=" col-md-6 col-lg-4 ">
                     <div className="card">
 

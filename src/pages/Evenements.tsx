@@ -37,7 +37,8 @@ function Evenements(){
             {eventsResponse.filter(ev => ev.urlImage == null).map((event:any) => (
                 <tr>
                 <td className="col1-tab">{event.nom}</td>
-                <td>{event.date}</td>
+                <td>{event.date
+                }</td>
               </tr>
             ))}</tbody>
             </table>
