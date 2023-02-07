@@ -2,7 +2,7 @@ import { Form, Navigate, NavLink, useNavigate } from "react-router-dom";
 import { Dropdown, Navbar, NavDropdown, Nav, Button, Collapse, Container, FormControl } from 'react-bootstrap';
 import '../styles/style.css';
 import '../styles/bootstrap.css';
-import React from 'react';
+
 
 
 function Navigation() {
@@ -19,15 +19,15 @@ function Navigation() {
 
     const renderLogin = () => {
         if (logged) {
-            return
-            <NavDropdown.Item onClick={logout}>Se déconnecter</NavDropdown.Item>
-
+            return  <NavDropdown title="" id="basic-nav-dropdown" className="nav-end navig">
+                <NavDropdown.Item onClick={logout}>Se déconnecter</NavDropdown.Item>
+            </NavDropdown>
         } else {
-            return <Dropdown.Menu>
+            return  <NavDropdown title="" id="basic-nav-dropdown" className="nav-end navig">
                 <NavDropdown.Item href="./connexion">Se connecter</NavDropdown.Item>
                 <NavDropdown.Divider />
                 <NavDropdown.Item href="./inscription">S'inscrire</NavDropdown.Item>
-            </Dropdown.Menu>
+            </NavDropdown>
         }
     }
 
@@ -56,10 +56,11 @@ function Navigation() {
                     </Nav>
                     <Nav>
                         <div className="connexion">
-
-                            {
-                                userDetails?.prenom ? "Bonjour " + userDetails.prenom : ""
-                            }
+                            <div className="bonjour">
+                                {
+                                    userDetails?.prenom ? "Bonjour " + userDetails.prenom : ""
+                                }
+                                </div>
                             <svg xmlns="http://www.w3.org/2000/svg" width="22" height="22" fill="currentColor"
                                 className="bi bi-person-circle navig" viewBox="0 0 16 16">
                                 <path d="M11 6a3 3 0 1 1-6 0 3 3 0 0 1 6 0z" />
@@ -67,11 +68,11 @@ function Navigation() {
                                     d="M0 8a8 8 0 1 1 16 0A8 8 0 0 1 0 8zm8-7a7 7 0 0 0-5.468 11.37C3.242 11.226 4.805 10 8 10s4.757 1.225 5.468 2.37A7 7 0 0 0 8 1z" />
                             </svg>
 
-                            <NavDropdown title="" id="basic-nav-dropdown" className="nav-end navig">
+                           
                                 {
                                     renderLogin()
                                 }
-                            </NavDropdown>
+                            
 
                             <div className="search">
                                 <form className="d-flex" role="search">

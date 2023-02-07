@@ -360,7 +360,9 @@ background-color: #ffffff99;
 text-decoration: none;
 color: #146E65;
 }
-
+.bonjour{
+  color: #fff;
+}
 
 /*Mentions legales*/
 
@@ -409,7 +411,13 @@ background: #FDCC1E;
 h5.card-title{
     font-weight: bold;
     font-family: 'Poppins';
+    height: 4em;
 }
+
+h6.card-subtitle{
+  height: 3em;
+}
+
 .card-culture{
     border-color:#146E65;
     border-width: 3px;
