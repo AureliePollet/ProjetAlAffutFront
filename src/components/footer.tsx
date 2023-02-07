@@ -34,7 +34,7 @@ return(
 
                 <div className="col-6 col-md-4 mb-4">
 
-                    <h5><a href="./index.html"><img src="./images/images/lobo_bleu.svg" alt="logo" height="36"
+                    <h5><a href="././"><img src="./images/images/lobo_bleu.svg" alt="logo" height="36"
                                 className="logo-nav"/></a></h5>
 
                     <ul className="footer list-unstyled d-flex">

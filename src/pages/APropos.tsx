@@ -9,10 +9,7 @@ function APropos(){
     <main>
         <section className="container a_propos">
             <div className="a_propos">
-                <h3 className="texte-descriptif"> Lorem ipsum dolor sit amet consectetur adipisicing elit. Sint officia
-                    natus sit ratione officiis unde ab
-                    assumenda dolorem eius voluptas. Quo illo nemo ipsum sint eveniet quod? Similique, vel
-                    consequuntur.</h3>
+                <h3 className="texte-descriptif"> Nous rendons la vie des étudiants un peu plus belle et beaucoup moins chère</h3>
                 </div>
                 <div>
                     <img className="logo" src="./images/logos/Logo_orange.svg" alt="Logo HubSpot"/>

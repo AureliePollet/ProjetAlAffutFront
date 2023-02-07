@@ -113,7 +113,7 @@ footer.nav-link{
 }
 
 .texte-descriptif {
-    padding: 60px 0;
+    padding: 40px 0;
     font-family: 'Poppins', sans-serif;
     letter-spacing: 1px;
 }
@@ -131,11 +131,15 @@ h1{
     font-size: 7vw !important;
     color: #146E65;
     margin: 60px 0 !important;
+    
   }
 
+  .navbar-toggler-icon{
+    background-image: url("/public/images/icons8-menu-30.png") !important;
+  }
 
-.btn-color {
-    background-color:#146E65;
+button.btn-color {
+    background-color:#69C3C6;
     color: white;
     text-align: center;
     margin: 30px;
@@ -204,7 +208,9 @@ h3,
 
     font-family: 'Roboto', sans-serif;
 }
-
+h3{
+  font-size: 2vw !important;
+}
 .h3_agenda, h3{
     margin: 20px 0;
     text-align: center;
@@ -266,6 +272,9 @@ h3,
   height: 200px;
 }
 
+.album{
+  margin-bottom: 20px;
+}
 .btn-connexion-modal{
   text-decoration: none;
 }
@@ -314,7 +323,7 @@ img.logo-contact{
 }
 
 .formContact{
-    background-color:rgb(244, 244, 244);
+    background-color:#f8cbdf29;
     padding: 20px;
     border-radius: 10px;
 }
@@ -352,15 +361,6 @@ text-decoration: none;
 color: #146E65;
 }
 
-.btn-resto{
-    margin-top: 30%;
-    background-color: #146E65;
-    color: #ffffff;
-    font-family: 'Roboto', sans-serif;
-    font-size: 1.1vw;
-    
-}
-
 
 /*Mentions legales*/
 
@@ -370,6 +370,12 @@ color: #146E65;
 
 .texte-mentions>h3{
     color:#146E65;
+}
+
+a.mentions{
+  text-decoration: none;
+  color: #F0802B;
+  font-family: 'Rampart One', cursive;
 }
 
 /*bs-surcharge*/
@@ -611,6 +617,14 @@ h5.card-title{
   
   button.btn-rose:hover{
     background-color: #F8CBDF;
+    border-color: #F8CBDF;
+    }
+  a.btn-rose:hover{
+    background-color: #F8CBDF;
+    border-color: #F8CBDF;
+    }
+  a.btn-rose{
+    background-color:#146E65;
     border-color: #F8CBDF;
     }
     

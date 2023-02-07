@@ -19,9 +19,9 @@ function Navigation() {
 
     const renderLogin = () => {
         if (logged) {
-            return
-            <NavDropdown.Item onClick={logout}>Se déconnecter</NavDropdown.Item>
-
+            return <Dropdown.Menu>
+                <NavDropdown.Item onClick={logout}>Se déconnecter</NavDropdown.Item>
+            </Dropdown.Menu>
         } else {
             return <Dropdown.Menu>
                 <NavDropdown.Item href="./connexion">Se connecter</NavDropdown.Item>

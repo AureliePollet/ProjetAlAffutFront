@@ -82,7 +82,7 @@ function Evenements(){
             </div>
 
             <div className="inscription-evenement">
-            <a href='./agenda'><button className="btn btn-outline-secondary btn-resto" type="submit">S'inscrire à un événement</button></a>
+            <a href='./agenda'><button className="btn btn-outline-secondary btn-color btn-jaune" type="submit">S'inscrire à un événement</button></a>
             </div>
 
             {
@@ -90,7 +90,7 @@ function Evenements(){
             }
 
             <div className="inscription-evenement">
-            <a href='./agenda'><button className="btn btn-outline-secondary btn-resto" type="submit">Voir tous nos évènements</button></a>
+            <a href='./agenda'><button className="btn btn-outline-secondary btn-color btn-orange" type="submit">Voir tous nos évènements</button></a>
             </div>
 
             

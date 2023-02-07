@@ -2,6 +2,7 @@ import '../styles/style.css';
 import '../styles/bootstrap.css';
 import { useEffect, useState } from 'react';
 import axios from 'axios';
+import { Button, ButtonGroup } from 'react-bootstrap';
 
 
 function Restaurants() {
@@ -12,10 +13,11 @@ function Restaurants() {
 
         <main id="Restaurants">
             <section className="p-3 p-md-5  imgBanniere"
-             style={{ backgroundImage: "url(./images/imagescategorie/brooke-lark-HlNcigvUi4Q-unsplash.jpg)",
-             backgroundRepeat: 'no-repeat', backgroundSize: 'cover',
-             
-   }}>
+                style={{
+                    backgroundImage: "url(./images/imagescategorie/brooke-lark-HlNcigvUi4Q-unsplash.jpg)",
+                    backgroundRepeat: 'no-repeat', backgroundSize: 'cover',
+
+                }}>
 
                 <h1 className="h1-banniere">Restaurants</h1>
 
@@ -45,7 +47,7 @@ function Restaurants() {
 
                 <section className="row m-2">
 
-                    <div className="album py-5 bg-light">
+                    <div className="album py-2 bg-light">
                         <div className="container">
 
                             <a href="./restaurantsListe.html" className="a_grid" />
@@ -112,11 +114,11 @@ function Restaurants() {
                     </div>
 
                     <div className="d-flex justify-content-between align-items-center">
-                        <div className="btn-group">
-                            <a
-                                className="btn btn-outline-secondary btn-rose btn-resto" href='./listeresto'>Aller voir les restaurants</a>
-
-                        </div>
+                        <ButtonGroup>
+                            <Button
+                                className="btn-rose" href='./listeresto'>Aller voir les restaurants
+                            </Button>
+                        </ButtonGroup>
 
                     </div>
 
