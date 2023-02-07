@@ -75,7 +75,7 @@ function Navigation() {
 
                             <div className="search">
                                 <form className="d-flex" role="search">
-                                    <input className="form-control me-2" type="search" placeholder="Recherche"
+                                    <input className="form-control me-2" type="search" placeholder="Bientôt en service"
                                         aria-label="Search" />
                                     <button className="btn btn-outline-success search-button" type="submit">Recherche</button>
                                 </form>

@@ -63,7 +63,7 @@ function Connexion() {
                         </div>
 
                         <div className="inscription-evenement">
-                            <button type="button" className="btn btn-color btn-form" onClick={login}>Se connecter</button>
+                            <button type="button" className="btn btn-color btn-orange btn-form" onClick={login}>Se connecter</button>
                         </div>
 
                         <div>

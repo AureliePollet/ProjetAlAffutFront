@@ -18,11 +18,18 @@ function Evenements(){
     const Events = () => (
         <section className="row mt-2">
             {eventsResponse.filter(ev => ev.urlImage != null).map((event:any) => (
-                <div className=" col-md-6 col-lg-4 ">
+                <div className=" col-md-6 col-lg-4  ">
                     <div className="card" >
                         <img src={event.urlImage} className="card-img-top" alt="..."/>
                         <div className="card-body">
-                            <p className="card-text">{event.descriptif}</p>
+                        <h5 className="card-title">{event.nom}</h5>
+                        <h6 className="card-subtitle mb-2 text-muted">{event.adresse}</h6>
+                            <p className="card-text event-descriptif scroll">{event.descriptif}</p>
+                            <div className="d-flex justify-content-between align-items-center">
+                            <div className="btn-group">
+                            <a href={event.url}> <button className="btn btn-sm btn-outline-secondary btn-rose">Allez sur le site</button></a>
+                           </div>
+                        </div>
                         </div>
                     </div>
                 </div>
@@ -37,8 +44,7 @@ function Evenements(){
             {eventsResponse.filter(ev => ev.urlImage == null).map((event:any) => (
                 <tr>
                 <td className="col1-tab">{event.nom}</td>
-                <td>{event.date
-                }</td>
+                <td>{event.adresse}</td>
               </tr>
             ))}</tbody>
             </table>
@@ -63,24 +69,20 @@ function Evenements(){
                     </video>
                 </div>
                 <div>
-                    <h3 className="texte-descriptif"> Lorem ipsum dolor sit amet consectetur adipisicing elit. Sint officia
-                        natus sit ratione officiis unde ab
-                        assumenda dolorem eius voluptas. Quo illo nemo ipsum sint eveniet quod? Similique, vel
-                        consequuntur.</h3>
+                    <h3 className="texte-descriptif"> Tu retrouveras sur cette page tous les évènements recensés dans la région.
+                    Que ce soit pour ton avenir ou tes loisirs, fais toi plaisir!</h3>
                 </div>
             </div>
             {
                 (eventsResponse.filter(ev => ev.urlImage != null).length > 0) ?  <Events/> : <p>Y'A RIEN ICI</p>
             }
             <div>
-                <h3 className="texte-descriptif"> Lorem ipsum dolor sit amet consectetur adipisicing elit. Sint officia
-                    natus sit ratione officiis unde ab
-                    assumenda dolorem eius voluptas. Quo illo nemo ipsum sint eveniet quod? Similique, vel
-                    consequuntur.</h3>
+                <h3 className="texte-descriptif"> <i>A l'Affut</i> te propose également de participer à nos évènements.
+                Rien de plus simple, inscris-toi et rejoins-nous pour participer à nos différents ateliers </h3>
             </div>
 
             <div className="inscription-evenement">
-            <a href='./agenda'><button className="btn btn-color" type="submit">S'inscrire à un événement</button></a>
+            <a href='./agenda'><button className="btn btn-outline-secondary btn-color btn-jaune" type="submit">S'inscrire à un événement</button></a>
             </div>
 
             {
@@ -88,7 +90,7 @@ function Evenements(){
             }
 
             <div className="inscription-evenement">
-            <a href='./agenda'><button className="btn btn-color" type="submit">Voir tous nos évènements</button></a>
+            <a href='./agenda'><button className="btn btn-outline-secondary btn-color btn-orange" type="submit">Voir tous nos évènements</button></a>
             </div>
 
             

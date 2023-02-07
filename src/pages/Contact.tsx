@@ -80,7 +80,7 @@ function Contact() {
                                   value={contenu} onChange={(e) => setContenu(e.target.value)}></textarea>
                     </div>
                     <div className="inscription-evenement">
-                        <button className="btn btn-color btn-form" type="button"
+                        <button className="btn btn-color btn-jaune btn-form" type="button"
                                 onClick={envoyer}>Envoyer ma demande
                         </button>
                     </div>

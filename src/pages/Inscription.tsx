@@ -89,7 +89,7 @@ function Inscription() {
                             required value={password} onChange={(e) => setPassword(e.target.value)} />
                     </div>
                     <div className="inscription-evenement">
-                        <button className="btn btn-color btn-form" type="button" onClick={register}>S'inscrire</button>
+                        <button className="btn btn-color btn-jaune btn-form" type="button" onClick={register}>S'inscrire</button>
                     </div>
                 </form>
             </section>
