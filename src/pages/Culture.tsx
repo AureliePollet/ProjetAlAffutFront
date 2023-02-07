@@ -1,10 +1,12 @@
 import '../styles/style.css';
 import '../styles/bootstrap.css';
+import Scroll from '../components/Scroll';
 
 
 function Culture() {
     return (
 <main id="Culture">
+  
 <h1>Culture / Aides</h1>
     <main className="container container_culture">
         <div className="card card-culture">

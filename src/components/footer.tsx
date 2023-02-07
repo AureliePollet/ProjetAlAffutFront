@@ -1,11 +1,13 @@
 import {NavLink} from "react-router-dom";
 import '../styles/style.css';
 import '../styles/bootstrap.css';
+import Scroll from "./Scroll";
 
 function Footer() {
 return(
     
     <footer className="py-5">
+        <Scroll/>
         <div className="container">
 
             <div className="row">

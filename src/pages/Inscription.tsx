@@ -24,6 +24,8 @@ function Inscription() {
         }
     }, []);
 
+    
+
     function register() {
 
         axios.post('http://localhost:8080/etudiant/add', {

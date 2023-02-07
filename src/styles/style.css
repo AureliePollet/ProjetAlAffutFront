@@ -145,7 +145,7 @@ button.btn-color {
     margin: 30px;
 }
 
-.btn-color:hover {
+button.btn-color:hover {
     background-color:#fdcc1e;
     color: white;
 }
@@ -160,8 +160,12 @@ button.btn-color {
 
 
 }
-
-
+.bonjour{
+  color: #fff;
+}
+h6.card-subtitle{
+  height: 3em;
+}
 .inscription-evenement {
 
     display: flex;
@@ -261,6 +265,16 @@ h3{
   .card-header,.card-body{
     font-family: 'Roboto', sans-serif;
   }
+
+  .card-body>h3{
+height: 3em;
+  }
+
+  .card-body>p{
+height: 8em;
+  }
+  
+
 
   .scroll {
     max-height: 100px;
@@ -409,6 +423,7 @@ background: #FDCC1E;
 h5.card-title{
     font-weight: bold;
     font-family: 'Poppins';
+      height: 4em;
 }
 .card-culture{
     border-color:#146E65;
@@ -671,6 +686,21 @@ h5.card-title{
     .boutons-admin>button,.boutons-admin>a {
      color: #ffffff !important;
     
+    }
+
+
+    /*Scroll*/
+    
+    #scroll_to_top {
+      position: fixed;
+      width: 50px;
+      height: 50px;
+      bottom: 50px;
+      right: 30px;
+      z-index: 1;
+    }
+    #scroll_to_top img {
+      width: 50px;
     }
 
     

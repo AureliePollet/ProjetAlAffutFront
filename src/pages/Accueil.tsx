@@ -2,6 +2,7 @@
 import '../styles/style.css';
 import '../styles/bootstrap.css';
 import Carousel from 'react-bootstrap/Carousel';
+import Scroll from '../components/Scroll';
 
 
 function Accueil(){
@@ -47,6 +48,7 @@ function Accueil(){
 
     <main className="container">
         <div className="text-accueil">
+         
             <h1>A l'affût</h1>
 
             <p> Dans notre site tu pourras trouver des réduction, des bons plans, des offres et beaucoup plus!

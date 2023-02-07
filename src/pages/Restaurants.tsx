@@ -3,6 +3,7 @@ import '../styles/bootstrap.css';
 import { useEffect, useState } from 'react';
 import axios from 'axios';
 import { Button, ButtonGroup } from 'react-bootstrap';
+import Scroll from '../components/Scroll';
 
 
 function Restaurants() {
@@ -12,6 +13,7 @@ function Restaurants() {
     return (
 
         <main id="Restaurants">
+         
             <section className="p-3 p-md-5  imgBanniere"
                 style={{
                     backgroundImage: "url(./images/imagescategorie/brooke-lark-HlNcigvUi4Q-unsplash.jpg)",
