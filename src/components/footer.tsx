@@ -1,11 +1,11 @@
-import {NavLink} from "react-router-dom";
+
 import '../styles/style.css';
 import '../styles/bootstrap.css';
 import Scroll from "./Scroll";
+import { Nav } from "react-bootstrap";
 
 function Footer() {
 return(
-    
     <footer className="py-5">
         <Scroll/>
         <div className="container">
@@ -14,11 +14,11 @@ return(
                 <div className="col-6 col-md-4 mb-4">
                     <h5>Menu</h5>
                     <ul className="nav flex-column">
-                        <NavLink to="./" className="nav-link p-0 nav-item mb-2 navig">Accueil</NavLink>
-                        <NavLink to="/restaurants" className="nav-link p-0 nav-item mb-2 navig">Restaurants</NavLink>
-                        <NavLink to="/lifestyle" className="nav-link p-0 nav-item mb-2 navig">Life Style</NavLink>
-                        <NavLink to="./culture-aides" className="nav-link p-0 nav-item mb-2 navig">Culture / Aides</NavLink>
-                        <NavLink to="./evenements" className="nav-link p-0 nav-item mb-2 navig">Événements</NavLink>
+                        <Nav.Link href="/" className="nav-link p-0 nav-item mb-2 navig">Accueil</Nav.Link>
+                        <Nav.Link href="/restaurants" className="nav-link p-0 nav-item mb-2 navig">Restaurants</Nav.Link>
+                        <Nav.Link href="/lifestyle" className="nav-link p-0 nav-item mb-2 navig">Life Style</Nav.Link>
+                        <Nav.Link href="/culture-aides" className="nav-link p-0 nav-item mb-2 navig">Culture / Aides</Nav.Link>
+                        <Nav.Link href="/evenements" className="nav-link p-0 nav-item mb-2 navig">Événements</Nav.Link>
             
                     </ul>
                 </div>
@@ -26,17 +26,17 @@ return(
                 <div className="col-6 col-md-4 mb-4">
                     <h5>Nous !!!</h5>
                     <ul className="nav flex-column">
-                    <NavLink to='./apropos' className="nav-link p-0 nav-item mb-2 navig" >À propos</NavLink>
-                    <NavLink to="./contact" className="nav-link p-0 nav-item mb-2 navig">Contactez-nous</NavLink>
-                    <NavLink to="./mentionslegales" className="nav-link p-0 nav-item mb-2 navig">Mentions
-                                Légales</NavLink>
+                    <Nav.Link href='/apropos' className="nav-link p-0 nav-item mb-2 navig" >À propos</Nav.Link>
+                    <Nav.Link href="/contact" className="nav-link p-0 nav-item mb-2 navig">Contactez-nous</Nav.Link>
+                    <Nav.Link href="/mentionslegales" className="nav-link p-0 nav-item mb-2 navig">Mentions
+                                Légales</Nav.Link>
                        
                     </ul>
                 </div>
 
                 <div className="col-6 col-md-4 mb-4">
 
-                    <h5><a href="././"><img src="./images/images/lobo_bleu.svg" alt="logo" height="36"
+                    <h5><a href="/"><img src="./images/images/lobo_bleu.svg" alt="logo" height="36"
                                 className="logo-nav"/></a></h5>
 
                     <ul className="footer list-unstyled d-flex">

@@ -1,12 +1,10 @@
 import '../styles/style.css';
 import '../styles/bootstrap.css';
-import Scroll from '../components/Scroll';
 
 
 function Culture() {
     return (
 <main id="Culture">
-  
 <h1>Culture / Aides</h1>
     <main className="container container_culture">
         <div className="card card-culture">
@@ -15,7 +13,7 @@ function Culture() {
                     <img src="./images/images/pass-culture.png" className="img-fluid rounded-start" alt="pass culture"/>
                 </div>
                 <div className="col-md-8">
-                    <div className="card-body">
+                    <div className="card-body-culture">
                         <h5 className="card-title">Pass Culture</h5>
                         <p className="card-text">
                         <p>Le <a href="https://pass.culture.fr/" className="lien" target="_blank"><strong>pass Culture</strong></a> te
@@ -39,7 +37,7 @@ function Culture() {
                     <img src="./images/images/sncf.png" className="img-fluid rounded-start " alt="sncf"/>
                 </div>
                 <div className="col-md-8">
-                    <div className="card-body">
+                    <div className="card-body-culture">
                         <h5 className="card-title">SNCF</h5>
                         <p className="card-text">
                         <p>La SNCF propose des tarifs réduits aux étudiants et aux apprentis. Sur les TER, elle propose
@@ -64,7 +62,7 @@ function Culture() {
                     <img src="./images/images/vacances.png" className="img-fluid rounded-start" alt="vacances"/>
                 </div>
                 <div className="col-md-8">
-                    <div className="card-body ">
+                    <div className="card-body-culture ">
                         <h5 className="card-title">Départ 18:25</h5>
                         <p className="card-text">
                         <p>Le <a href="https://depart1825.com/" className="lien" target="_blank"><strong>"Départ 18:25"</strong></a>
